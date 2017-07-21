@@ -1,0 +1,4 @@
+﻿  Hangman.cpp
+c:\users\huyang\source\repos\hhyangg\hhyangg\hangman\hangman\hangman.cpp(43): warning C4018: “<”: 有符号/无符号不匹配
+  Hangman.vcxproj -> C:\Users\HuYang\Source\Repos\hhYanGG\hhYanGG\Hangman\Debug\Hangman.exe
+  Hangman.vcxproj -> C:\Users\HuYang\Source\Repos\hhYanGG\hhYanGG\Hangman\Debug\Hangman.pdb (Partial PDB)
