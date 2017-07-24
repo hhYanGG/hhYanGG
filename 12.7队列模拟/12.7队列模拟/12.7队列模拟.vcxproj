@@ -144,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="12.7队列模拟.cpp" />
+    <ClCompile Include="Customer.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

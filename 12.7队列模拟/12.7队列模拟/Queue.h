@@ -1,4 +1,17 @@
 #pragma once
+class Customer
+{
+private:
+	long arrive;	//arrive time for customer
+	int processTime;//processing time for customer
+public:
+	Customer() { arrive = processTime = 0; }
+	void set(long when);
+	long when() const { return arrive; }
+	int ptime() const { return processTime; }
+	~Customer();
+};
+typedef Customer Item;
 class Queue
 {
 	enum 
@@ -23,4 +36,6 @@ public:
 	bool enqueue(const Item &item);//add item to end
 	bool dequeue(Item &item);//remove item from front
 };
+
+
 

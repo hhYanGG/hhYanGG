@@ -11,6 +11,13 @@ Queue::Queue(int qs):qsize(qs)
 
 Queue::~Queue()
 {
+	Node *temp;
+	while (front != NULL)
+	{
+		temp = front;
+		front = front->next;
+		delete temp;
+	}
 }
 
 bool Queue::isfull() const
@@ -25,10 +32,31 @@ int Queue::queuecount() const
 
 bool Queue::enqueue(const Item & item)
 {
-	return false;
+	if (isfull())
+		return false;
+	Node *add = new Node;
+	//on failure ,new throws std::bad_alloc exception
+	add->item = item;
+	add->next = NULL;
+	items++;
+	if (front = NULL)
+		front = add;
+	else
+		rear->next = add;
+	rear = add;
+	return true;
 }
 
 bool Queue::dequeue(Item & item)
 {
-	return false;
+	if (front = NULL)
+		return false;
+	item = front->item;
+	items--;
+	Node *temp = front;
+	front = front->next;
+	delete temp;
+	if (items == 0)
+		rear = NULL;
+	return true;
 }
