@@ -2,8 +2,11 @@
 #include "Queue.h"
 
 
-Queue::Queue(int qs)
+Queue::Queue(int qs):qsize(qs)
 {
+	front = rear = NULL;
+	items = 0;
+	
 }
 
 Queue::~Queue()
