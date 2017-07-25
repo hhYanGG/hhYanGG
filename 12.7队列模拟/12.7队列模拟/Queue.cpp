@@ -20,14 +20,19 @@ Queue::~Queue()
 	}
 }
 
+bool Queue::isempty() const
+{
+	return items == 0;
+}
+
 bool Queue::isfull() const
 {
-	return false;
+	return items == qsize;
 }
 
 int Queue::queuecount() const
 {
-	return 0;
+	return items;
 }
 
 bool Queue::enqueue(const Item & item)
