@@ -36,13 +36,51 @@ int main()
 	long turnaways = 0;		//turned away by full queuq
 	long customers = 0;		//joined the queue
 	long served = 0;		//served during the simulation
-	long sum_time = 0;		//cumulative line lenfth
+	long sum_line = 0;		//cumulative line lenfth
 	int wait_time = 0;		//time until autoteller isfree
 	long line_wait = 0;		//cumulative time in line
-    return 0;
+	//running the simulation
+	for (int cycle = 0; cycle < cyclelimit; cycle++)
+	{
+		if (newcustomer(min_per_cust))
+		{
+			if (line.isfull())
+				turnaways++;
+			else
+			{
+				customers++;
+				temp.set(cycle);
+				line.enqueue(temp);
+			}
+		}
+		if (wait_time > 0)
+		{
+			wait_time--;
+		}
+		sum_line += line.queuecount();
+	}
+	//reporting result
+	if (customers > 0)
+	{
+		cout << "customer accepted: " << customers << endl;
+		cout << "customer served: " << served << endl;
+		cout << "		turnaway: " << turnaways << endl;
+		cout << "average queue size: ";
+		cout.precision(2);
+		cout.setf(ios_base::fixed, ios_base::floatfield);
+		cout << (double)sum_line / cyclelimit << endl;
+		cout << "average wait time: "
+			<< (double)line_wait / served << "minutes\n";
+	}
+	else
+	{
+		cout << "No customers\n";
+	}
+	cout << "Done!\n";
+	return 0;
 }
 
 bool newcustomer(double x)
 {
-	return false;
+	return (std::rand() * x / RAND_MAX < 1);
 }

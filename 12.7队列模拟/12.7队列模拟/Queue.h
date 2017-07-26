@@ -9,7 +9,7 @@ private:
 	long arrive;	//arrive time for customer
 	int processTime;//processing time for customer
 public:
-	Customer() { arrive = processTime = 0; }
+	Customer(); 
 	void set(long when);
 	long when() const { return arrive; }
 	int ptime() const { return processTime; }

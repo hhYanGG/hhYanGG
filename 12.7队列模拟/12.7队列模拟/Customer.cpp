@@ -4,6 +4,7 @@
 
 Customer::Customer()
 {
+	arrive = processTime = 0;
 }
 
 
