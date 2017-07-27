@@ -1,4 +1,3 @@
-﻿  12.7队列模拟.cpp
-c:\users\huyang\source\repos\hhyangg\12.7队列模拟\12.7队列模拟\12.7队列模拟.cpp(16): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+﻿  Queue.cpp
   12.7队列模拟.vcxproj -> C:\Users\HuYang\Source\Repos\hhYanGG\12.7队列模拟\Debug\12.7队列模拟.exe
   12.7队列模拟.vcxproj -> C:\Users\HuYang\Source\Repos\hhYanGG\12.7队列模拟\Debug\12.7队列模拟.pdb (Partial PDB)
