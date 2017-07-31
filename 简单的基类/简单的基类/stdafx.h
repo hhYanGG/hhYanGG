@@ -9,6 +9,9 @@
 
 #include <stdio.h>
 #include <tchar.h>
+#include <iostream>
+#include "tabtenn0.h"
+#include "RatedPlayer.h"
 
 
 
